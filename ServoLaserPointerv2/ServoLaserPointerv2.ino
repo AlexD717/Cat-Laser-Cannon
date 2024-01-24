@@ -1,5 +1,11 @@
 #include <Servo.h>
 
+/*
+Horizontal Servo - Pin 5
+Vertical Servo - Pin 6
+Touch Sensor - Pin 3
+*/
+
 Servo horizontalServo;
 Servo verticalServo;
 
