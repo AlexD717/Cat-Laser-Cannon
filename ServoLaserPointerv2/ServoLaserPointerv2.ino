@@ -11,10 +11,10 @@ Servo verticalServo;
 
 const int touchPin = 3;
 
-int minHorizontalAngle = 45;
-int maxHorizontalAngle = 135;
-int minVerticalAngle = 30;
-int maxVerticalAngle = 60;
+int minHorizontalAngle = 0;
+int maxHorizontalAngle = 90;
+int minVerticalAngle = 10;
+int maxVerticalAngle = 45;
 
 float timeToGetToPosition = 0;
 float minTime = 500;
