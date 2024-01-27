@@ -9,8 +9,6 @@ Touch Sensor - Pin 3
 Servo horizontalServo;
 Servo verticalServo;
 
-const int touchPin = 3;
-
 int minHorizontalAngle = 0;
 int maxHorizontalAngle = 90;
 int minVerticalAngle = 10;
@@ -30,12 +28,7 @@ float verticalSpeed = 1;
 float minSpeed = 3;
 float maxSpeed = 8;
 
-bool run = false;
-
 void setup() {
-  pinMode(touchPin, INPUT);
-
-  // put your setup code here, to run once:
   horizontalServo.attach(5);
   verticalServo.attach(6);
 
@@ -72,19 +65,9 @@ void setup() {
   if (verticalAngleToGoTo < verticalAngle){
     verticalSpeed *= -1;
   }
-
 }
 
 void loop() {
-  int sensorValue = digitalRead(touchPin);
-  if (sensorValue == 1){
-    run = true;
-  }
-
-  if (run == false){
-    return;
-  }
-
   horizontalAngle = horizontalServo.read();
   Serial.println("Horizontal Angle: " + (String)horizontalAngle);
   if (abs(horizontalAngleToGoTo - horizontalAngle) <= abs(horizontalSpeed) + 5){
