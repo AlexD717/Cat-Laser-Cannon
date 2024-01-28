@@ -3,7 +3,7 @@
 /*
 Horizontal Servo - Pin 5
 Vertical Servo - Pin 6
-Touch Sensor - Pin 3
+Motion Sensor (PIR) - Pin 3
 */
 
 Servo horizontalServo;
